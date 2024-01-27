@@ -1,10 +1,9 @@
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
-
+import { UserButton } from "@clerk/nextjs";
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <Button variant="link">Hello shadcn</Button>
-    </main>
+    <div className="flex flex-col gap-y-4">
+      <h1>Dashboard</h1>
+      <UserButton afterSignOutUrl="/" />
+    </div>
   );
 }
